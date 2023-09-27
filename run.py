@@ -30,3 +30,18 @@ def take_input():
         except ValueError:
             print("Please type a number\n")
     return value - 1
+
+
+def main():
+    global game_state
+    turn = 1
+    while True:
+        print_board()
+        if (turn == 1):
+            print("X's Chance\n")
+            value = take_input()
+            game_state[value] = 'X' 
+        else:
+            print("O's Chance\n")
+            value = take_input()
+            game_state[value] = 'O'
