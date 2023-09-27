@@ -13,6 +13,17 @@ def print_board():
             print(f"--|---|---")
 
 
+def check_win():
+    wins = [0, 1, 2], [3, 4, 5], [6, 7, 8], [6, 3, 0], [7, 4, 1], [8, 5, 2], [8, 4, 0], [6, 4, 2]
+    for win in wins:
+        if((game_state[win[0]] == game_state[win[1]] == game_state[win[2]]) and game_state[win[0]] != None):
+            print_board()
+            print(game_state[win[0]] + " Won the match")
+            return 1
+  
+    return -1
+
+
 def take_input():
     global game_state
     while True:
