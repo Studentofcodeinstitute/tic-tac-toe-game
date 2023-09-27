@@ -56,3 +56,6 @@ def main():
             print("O's Chance\n")
             value = take_input()
             game_state[value] = 'O'
+        if (has_winner != -1):
+            print('Match over\n')
+            break
