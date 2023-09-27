@@ -43,6 +43,15 @@ def take_input():
     return value - 1
 
 
+def is_game_over():
+    for i in game_state:
+        if i == None:
+            return False
+
+    print_board()
+    return True
+
+
 def main():
     global game_state
     turn = 1
@@ -56,6 +65,7 @@ def main():
             print("O's Chance\n")
             value = take_input()
             game_state[value] = 'O'
+        has_winner = check_win
         if (has_winner != -1):
             print('Match over\n')
             break
