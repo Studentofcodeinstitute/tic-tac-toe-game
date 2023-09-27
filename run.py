@@ -1,6 +1,7 @@
 game_state = [None, None, None, None, None, None, None, None, None]
 turn = 1
 
+
 def print_board():
     global game_state
     for i in [0, 1, 2]:
@@ -10,3 +11,22 @@ def print_board():
         print(f"{value_1} | {value_2} | {value_3} ")
         if i < 2:
             print(f"--|---|---")
+
+
+def take_input():
+    global game_state
+    while True:
+        value = (input("Please enter a value between 1-9: "))
+        try:
+            value = int(value)
+            if value < 1 or value > 9:
+                print('Please type a number within the range!\n')
+                return take_input()
+            elif game_state[value - 1] is not None:
+                print('Option also chosen earlier!\n')
+                return take_input()
+            else:
+                return value - 1
+        except ValueError:
+            print("Please type a number\n")
+    return value - 1
