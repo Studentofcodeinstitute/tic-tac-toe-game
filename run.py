@@ -14,13 +14,16 @@ def print_board():
 
 
 def check_win():
-    wins = [0, 1, 2], [3, 4, 5], [6, 7, 8], [6, 3, 0], [7, 4, 1], [8, 5, 2], [8, 4, 0], [6, 4, 2]
+    wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [6, 3, 0], [7, 4, 1], [8, 5, 2],
+            [8, 4, 0], [6, 4, 2]]
     for win in wins:
-        if((game_state[win[0]] == game_state[win[1]] == game_state[win[2]]) and game_state[win[0]] != None):
+        if ((game_state[win[0]] == game_state[win[1]] == game_state[win[2]])
+                and game_state[win[0]] is not None):
             print_board()
             print(game_state[win[0]] + " Won the match")
             return 1
-  
+
     return -1
 
 
@@ -45,7 +48,7 @@ def take_input():
 
 def is_game_over():
     for i in game_state:
-        if i == None:
+        if i is None:
             return False
 
     print_board()
@@ -60,12 +63,32 @@ def main():
         if (turn == 1):
             print("X's Chance\n")
             value = take_input()
-            game_state[value] = 'X' 
+            game_state[value] = 'X'
         else:
             print("O's Chance\n")
             value = take_input()
             game_state[value] = 'O'
-        has_winner = check_win
+        has_winner = check_win()
         if (has_winner != -1):
             print('Match over\n')
             break
+        if is_game_over():
+            print("Draw match\n")
+            break
+        turn = 1 - turn
+
+
+while True:
+    print("Welcome to Tic Tac Toa game:")
+    print("It is made for two players.")
+    print("'X' indicate first player chance and")
+    print("'O' indicate second player chance,")
+    print("to win complete a straight line of your letter")
+    print("(Diagonal, Horizontal, Vertical)")
+    print("Positions estimated 1-9 starting at the top left.\n")
+    main()
+    answer = input("Do you want to play again? (Y/N): ")
+    if (answer.lower() == 'y' or answer.lower == 'yes'):
+        game_state = [None, None, None, None, None, None, None, None, None]
+    else:
+        break
