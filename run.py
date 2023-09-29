@@ -1,7 +1,7 @@
 game_state = [None, None, None, None, None, None, None, None, None]
 turn = 1
 
-game_state = "global "
+game_state = "global"
 
 
 def print_board():
