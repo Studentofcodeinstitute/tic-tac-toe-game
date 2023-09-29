@@ -1,32 +1,77 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tic Tic Toe Game
 
-Welcome,
+### Tic tic toe is a python game, which runs in the terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+### Two players can challenge each other. 'X' maintain first player roll and 'O' second. To win the match one of the player should complete a straight line of own letter in diagonal or horizontal or vertical.
+### You can find my project Deploy here: https://tic-tac-toe-gpp3-76c82ce566fc.herokuapp.com/
 
-## Reminders
+![alt text](/images/tic-tac-toe1.png)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## How to play
 
-## Creating the Heroku app
+### Tic-tac-toe game is based on the classic pen-paper game. You can read more about on wikipedia:-(https://en.wikipedia.org/wiki/Tic-tac-toe)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### This version is for two players, 
+### 'X' is the first player turn and 'O' is the second player turn.
+### The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![alt text](/images/tic-tac-toe2.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Existing features
+    1. Two chances
+       1. X's chance
+       2. O's chance
+![alt text](/images/Chances.png)
 
-Connect your GitHub repository and deploy as normal.
+    2. Match over:
+        1. X won the match or O won the match,
+        2. Option to play again.
+![alt text](/images/x-won-the-match.png)
 
-## Constraints
+### Input validation and Error checking
+     1. The number within range 1-9,
+     2. Option also chosen earlier,
+     3. Accepts only numbers.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![alt text](/images/not-in-range.png)
 
----
 
-Happy coding!
+## Future features
+   1. Allow players to move in range 1-9
+   2. Allow to play repetitively
+
+## Data Model
+  I decided to use a board formed nine empty places. It's much more easy to find out the way to win.
+
+
+## Testing
+I have manually tested this project by doing the following:
+    1. Passed the code through a PEP8 linter and confirmed there are no problems.
+    2. breake the game in case of typing n, no or other letters in the question of "Do you like to play again?"
+
+## Solved Bugs
+
+1. To find out the method for "Option also chosen earlier" (elif game_state[value - 1] is not None:), assisted by mentor.
+
+## Remaining bugs
+
+
+
+## Validator testing
+  
+1. PEP8
+    No errors were found when passing through the PEP8online.com.
+
+## Deployment
+    
+The live link can be found here - <https://tic-tac-toe-gpp3-76c82ce566fc.herokuapp.com/>
+
+
+## Credits
+
+1. Code institute for the deployment terminal.
+2. Wikipedia for the details.
+3. Code idea provided by <https://gist.github.com/CodeWithHarry/d83fed6958b7626ef51aa87c2d7130de>
+    

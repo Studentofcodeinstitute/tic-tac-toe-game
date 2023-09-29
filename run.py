@@ -1,6 +1,8 @@
 game_state = [None, None, None, None, None, None, None, None, None]
 turn = 1
 
+game_state = "global "
+
 
 def print_board():
     global game_state
@@ -73,13 +75,13 @@ def main():
             print("Match over\n")
             print("ATTENTION!")
             print("Any other character except 'yes' or 'y'")
-            print("results in exiting the game.")
+            print("result in exiting the game.")
             break
         if is_game_over():
             print("Draw match\n")
             print("ATTENTION!")
             print("Any other character except 'yes' or 'y'")
-            print("results in exiting the game.")
+            print("result in exiting the game.")
             break
         turn = 1 - turn
 
