@@ -70,16 +70,22 @@ def main():
             game_state[value] = 'O'
         has_winner = check_win()
         if (has_winner != -1):
-            print('Match over\n')
+            print("Match over\n")
+            print("ATTENTION!")
+            print("Any other character except 'yes' or 'y'")
+            print("results in exiting the game.")
             break
         if is_game_over():
             print("Draw match\n")
+            print("ATTENTION!")
+            print("Any other character except 'yes' or 'y'")
+            print("results in exiting the game.")
             break
         turn = 1 - turn
 
 
 while True:
-    print("Welcome to Tic Tac Toa game:")
+    print("Welcome to Tic Tac Toe game:")
     print("It is made for two players.")
     print("'X' indicate first player chance and")
     print("'O' indicate second player chance,")
