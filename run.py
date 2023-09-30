@@ -1,7 +1,4 @@
 game_state = [None, None, None, None, None, None, None, None, None]
-turn = 1
-
-game_state = "global"
 
 
 def print_board():
@@ -96,7 +93,7 @@ while True:
     print("Positions estimated 1-9 starting at the top left.\n")
     main()
     answer = input("Do you want to play again? (Y/N): ")
-    if (answer.lower() == 'y' or answer.lower == 'yes'):
+    if (answer.lower() == 'y' or answer.lower() == 'yes'):
         game_state = [None, None, None, None, None, None, None, None, None]
     else:
         break

@@ -48,21 +48,28 @@
 
 ## Testing
 I have manually tested this project by doing the following:
+
     1. Passed the code through a PEP8 linter and confirmed there are no problems.
+
     2. breake the game in case of typing n, no or other letters in the question of "Do you like to play again?"
 
 ## Solved Bugs
 
-1. To find out the method for "Option also chosen earlier" (elif game_state[value - 1] is not None:), assisted by mentor.
+1. To find out the method for "Option also chosen earlier" (elif game_state[value - 1] is not None:).
+2. while True and try method into the function take_input.
 
 ## Remaining bugs
+
 
 
 
 ## Validator testing
   
 1. PEP8
+
     No errors were found when passing through the PEP8online.com.
+    But still have following issue in the terminal "using global for variable but no assignment done yet"
+ 
 
 ## Deployment
     
